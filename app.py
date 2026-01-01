@@ -17,12 +17,11 @@ def extract_card_info(text):
     exdate = re.search(r'(0[0-9]|1[0-2])/([0-9]{2})', text)
     name = None
 
-    lines = text.split('\n')
-    for line in lines:
-        if re.match(r'[A-Z\s]{5,}', line.strip()) and not line.strip().isdigit():
-            name = line.strip()
+    lines = text.split('\n') 
+    for line in lines: 
+        if re.match(r'[A-Z\s]{5,}', line.strip()) and not line.strip().isdigit(): 
+            name = line.strip() 
             break
-
     return {
         "cardno": cardno.group() if cardno else None,
         "exdate": exdate.group() if exdate else None,
