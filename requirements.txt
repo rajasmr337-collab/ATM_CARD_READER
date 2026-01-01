@@ -1,5 +1,7 @@
 streamlit
-pytesseract
+easyocr
+torch
+torchvision
 pillow
-pymysql
 numpy
+pymysql
