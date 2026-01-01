@@ -14,7 +14,7 @@ upl_img = st.file_uploader("Upload ATM Card Image", type=["jpg", "jpeg", "png"])
 # ====== Extract Card Info Function ======
 def extract_card_info(text):
     cardno = re.search(r'\b(?:\d[ -]*?){13,19}\b', text)
-    exdate = re.search(r'(0[0-9]|1[0-2])\/([0-9]{2})', text)
+    exdate = re.search(r'(0[0-9]|1[0-2])/([0-9]{2})', text)
     name = None
 
     lines = text.split('\n')
